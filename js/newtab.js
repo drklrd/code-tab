@@ -1,5 +1,5 @@
  var editor = ace.edit("editor");
- editor.setTheme("ace/theme/monokai");
+ editor.setTheme("ace/theme/dracula");
 
  var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
  editor.session.setMode(new JavaScriptMode());
@@ -8,12 +8,11 @@
  	fontSize: "15pt"
  });
 
-
- function changeLanguage(){
- 	alert(8)
- }
-
- document.getElementById('selector').addEventListener('change', () => {
- 	alert(88)
-
+ document.getElementById('selector').addEventListener('change', (evt) => {
+ 	 JavaScriptMode = ace.require(`ace/mode/${evt.target.value}`).Mode;
+ 	 editor.session.setMode(new JavaScriptMode());
  });
+
+
+
+
