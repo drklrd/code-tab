@@ -10,11 +10,23 @@ body{
 }
 
 .nice{
-	color: #ffffff;
 	padding: 20px;
 	margin-left: 90%;
 	position: absolute;
-	background-color: #2c3e50;
-	width : 10%;
-	height: 100%;
+	/*background-color: #2c3e50;*/
+	/*width : 10%;*/
+	/*height: 100%;*/
+}
+
+.selector{
+	cursor: pointer;
+}
+
+.code-tab{
+	position: absolute;
+	top: 90%;
+	left : 83%;
+	font-size: 30px;
+	color: #ffffff;
+	opacity: 0.2;
 }
