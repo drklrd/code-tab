@@ -1,6 +1,6 @@
 {
 	"manifest_version": 2,
-	"name": "Chrominary",
+	"name": "Code Tab",
 	"description": "This is a chrome extension",
 	"version": "1.0",
 	"icons": {
