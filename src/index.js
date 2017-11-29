@@ -1,21 +1,36 @@
 import AceEditor from 'react-ace';
-import brace from 'brace';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import 'brace/mode/javascript';
-import 'brace/theme/cobalt';
-
 import SelectComponent from './select';
+
+import './acemodes';
 
 class App extends React.Component{
 
+	constructor(props){
+        super(props);
+		this.state = {
+			mode : 'javascript'
+		};
+        this.updateMode = this.updateMode.bind(this);
+    }
+
+	updateMode(mode){
+		this.setState({
+			mode
+		});
+	}
+
 	render(){
+		let codeTab = '<code-tab/>';
 		return(
 			<div className="row no-margin">
 				<div className="col-xs-12">
 					<AceEditor
-						mode="javascript"
+						ref="editor"
+						fontSize="20px"
+						mode={this.state.mode}
 						theme="cobalt"
 						width="100%"
 						height="100vh"
@@ -23,18 +38,15 @@ class App extends React.Component{
 						editorProps={{$blockScrolling: true}}
 					/>
 				</div>
-				<div className="floating font-20">
-					<SelectComponent />
+				<div className="floating font-large">
+					<SelectComponent updateMode={this.updateMode}/>
 				</div>
 				<div className="code-tab">
-					code-tab
+					<span> {codeTab} </span>
 				</div>
 			</div>
-
 		)
 	}
-
 }
-
 
 ReactDOM.render(<App/>,document.getElementById("app"));

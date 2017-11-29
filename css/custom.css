@@ -2,49 +2,31 @@ body{
 	font-family: 'Ubuntu', sans-serif;
 }
 
+.font-large *{
+	font-size: 15px !important;
+}
+
 .floating{
-	position: absolute;
+	position: fixed;
 	top : 5%;
-	left : 90%;
+	left : 85%;
 	background: #ffffff;
-	padding: 10px;
-}
-
-.font-20 *{
-	font-size: 20px;
-}
-
-.no-margin{
-	margin: none !important;
-	padding: none !important;
-}
-
-#editor{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    margin-left : 0%;
-}
-
-.nice{
-	top : 3%;
 	padding: 20px;
-	margin-left: 91%;
-	position: absolute;
-	z-index: 1000;
-	background-color: rgba(255,255,255,0.1) ;
-
-}
-
-.selector{
-	cursor: pointer;
 }
 
 .code-tab{
+	font-family: 'VT323', monospace;
 	position: absolute;
-	top: 90%;
-	left : 92%;
-	font-size: 30px;
+	top: 85%;
+	left : 80%;
+	font-size: 60px;
 	color: #ffffff;
 	opacity: 0.2;
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome and Opera */
 }

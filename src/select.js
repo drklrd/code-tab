@@ -8,22 +8,36 @@ const languages = ['javascript','python'];
 
 export default class SelectComponent extends React.Component{
 
+    constructor(props){
+        super(props);
+        this.state = {
+            selection : 'javascript'
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event){
+        this.setState({
+            selection : event.target.value
+        });
+        this.props.updateMode(event.target.value);
+    }
+
     render(){
 
-        let languagesList = languages.map((language)=>{
+        let languagesList = languages.map((language,index)=>{
             return (
-                <MenuItem value={language}>{language}</MenuItem>
+                <MenuItem key={index} value={language}>{language}</MenuItem>
             );
         })
 
         return(
             <FormControl>
-                <InputLabel htmlFor="language">Language</InputLabel>
-                <Select value={"javascript"} input={<Input name="language" id="language" />}
+                <Select value={this.state.selection} onChange={this.handleChange}  input={<Input name="language" id="language" />}
                 >
                     {languagesList}
                 </Select>
-                <FormHelperText>Some important helper text</FormHelperText>
+                <FormHelperText>Select language of your choice</FormHelperText>
             </FormControl>
         );
     }
