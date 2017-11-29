@@ -10,9 +10,13 @@ body{
 }
 
 .nice{
+	top : 3%;
 	padding: 20px;
-	margin-left: 90%;
+	margin-left: 91%;
 	position: absolute;
+	z-index: 1000;
+	background-color: rgba(255,255,255,0.1) ;
+
 }
 
 .selector{
@@ -25,5 +29,5 @@ body{
 	left : 92%;
 	font-size: 30px;
 	color: #ffffff;
-	opacity: 0.3;
+	opacity: 0.2;
 }
