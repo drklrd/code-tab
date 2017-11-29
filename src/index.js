@@ -1,8 +1,8 @@
 import AceEditor from 'react-ace';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import SelectComponent from './select';
+import { split } from 'react-ace';
 
 import './acemodes';
 
@@ -11,7 +11,7 @@ class App extends React.Component{
 	constructor(props){
         super(props);
 		this.state = {
-			mode : 'javascript'
+			mode : 'python'
 		};
         this.updateMode = this.updateMode.bind(this);
     }
@@ -28,7 +28,8 @@ class App extends React.Component{
 			<div className="row no-margin">
 				<div className="col-xs-12">
 					<AceEditor
-						ref="editor"
+						splits={2}
+    					orientation="beside"
 						fontSize="20px"
 						mode={this.state.mode}
 						theme="cobalt"
@@ -39,7 +40,7 @@ class App extends React.Component{
 					/>
 				</div>
 				<div className="floating font-large">
-					<SelectComponent updateMode={this.updateMode}/>
+					<SelectComponent mode={this.state.mode} updateMode={this.updateMode}/>
 				</div>
 				<div className="code-tab">
 					<span> {codeTab} </span>

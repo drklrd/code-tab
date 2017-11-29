@@ -11,7 +11,7 @@ export default class SelectComponent extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            selection : 'javascript'
+            selection : this.props.mode
         };
         this.handleChange = this.handleChange.bind(this);
     }
@@ -24,20 +24,19 @@ export default class SelectComponent extends React.Component{
     }
 
     render(){
-
         let languagesList = languages.map((language,index)=>{
             return (
                 <MenuItem key={index} value={language}>{language}</MenuItem>
             );
         })
-
         return(
             <FormControl>
-                <Select value={this.state.selection} onChange={this.handleChange}  input={<Input name="language" id="language" />}
-                >
+                <Select value={this.state.selection} onChange={this.handleChange}  input={<Input name="language" id="language" />} >
                     {languagesList}
                 </Select>
-                <FormHelperText>Select language of your choice</FormHelperText>
+                <FormHelperText>
+                    Select language of your choice
+                </FormHelperText>
             </FormControl>
         );
     }
