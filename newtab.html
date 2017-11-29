@@ -26,6 +26,9 @@
 		<script src="js/ace-src-min/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/ace-src-min/mode-python.js" type="text/javascript" charset="utf-8"></script>
 
+
+
+
 		<!-- Cascading Style Sheets -->
 		
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -37,30 +40,7 @@
 	</head>
 	
 	<body>
-		
-		<div>
-			<div id="editor">
-				function sayHello(){
-				    console.log("HELLO THERE !");
-				}
-
-				sayHello();
-			</div>
-		</div>
-
-		<div class="nice">
-			<div class="form-group">
-				<label for="s1">Select language</label>
-				<select id="s1" class="form-control">
-					<option value="javascript">Javascript</option>
-					<option value="python">Python</option>
-				</select>
-			</div>
-			  
-		</div>
-
-		<div class="code-tab">code tab</div>
-		
-		<script src="js/newtab.js"></script>
+		<div id="app"></div>
+		<script type="text/javascript" src="dist/bundle.js"></script>
 	</body>
 </html>
