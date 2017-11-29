@@ -4,7 +4,7 @@ body{
 
 #editor{
     height: 100%;
-    width: 90%;
+    width: 100%;
     position: absolute;
     margin-left : 0%;
 }
@@ -13,9 +13,6 @@ body{
 	padding: 20px;
 	margin-left: 90%;
 	position: absolute;
-	background-color: #bdc3c7;
-	width : 10%;
-	height: 100%;
 }
 
 .selector{
@@ -27,6 +24,6 @@ body{
 	top: 90%;
 	left : 92%;
 	font-size: 30px;
-	/*color: #ffffff;*/
+	color: #ffffff;
 	opacity: 0.3;
 }
