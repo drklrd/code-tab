@@ -40,6 +40,7 @@ class App extends React.Component{
 					<AceEditor
 						ref={"editor"}
 						splits={2}
+						showPrintMargin={false}
     					orientation="beside"
 						fontSize={this.state.fontSize}
 						mode={this.state.mode}
@@ -55,13 +56,13 @@ class App extends React.Component{
 				</div>
 				<div className="floating-buttons font-large">
 					<div className="row">
-						<div className="col-xs-6">
+						<div className="col-xs-12 col-sm-6">
 							<Button raised onClick={()=>{this.alterFontSize('up')}}>
 								Size &nbsp;
 								<Icon>add_circle</Icon>
 							</Button>
 						</div>
-						<div className="col-xs-6">
+						<div className="col-xs-12 col-sm-6">
 							<Button raised onClick={()=>{this.alterFontSize('down')}}>
 								Size &nbsp;
 								<Icon>remove_circle</Icon>
