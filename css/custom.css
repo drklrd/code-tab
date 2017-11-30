@@ -6,12 +6,19 @@ body{
 	font-size: 15px !important;
 }
 
+
 .floating{
 	position: fixed;
 	top : 5%;
 	left : 85%;
 	background: #ffffff;
 	padding: 20px;
+}
+
+.floating-buttons{
+	position: fixed;
+	top : 18%;
+	left : 85%;
 }
 
 .code-tab{
@@ -30,3 +37,4 @@ body{
 			  user-select: none; /* Non-prefixed version, currently
 									supported by Chrome and Opera */
 }
+
